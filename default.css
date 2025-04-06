@@ -5,7 +5,19 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+body:after {
+  --color-scanline: rgba(255,255,255,.075);
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 3;
+  background: repeating-linear-gradient(to bottom, var(--color-scanline), var(--color-scanline) 1px, transparent 1px, transparent 5px);
+}	
 .welcome-page {
   position: fixed;
   top: 0;
